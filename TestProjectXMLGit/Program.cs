@@ -2,18 +2,14 @@
 
 namespace TestProjectXMLGit
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            if (args.Length == 1 && args[0].EndsWith(".xml"))
-            {
-                // try to open the file
-            }
-            else
-            {
-                Console.WriteLine("Invalid use! Try: TestProjektXMLGit yourxmlname.xml");
-            }
+            XMLParser hans = new XMLParser("TestReport.xml");
+            foreach (var transaction in DBFake.FakeDB.GetTransactions())
+                Console.WriteLine(transaction.ToString());
+            Console.ReadLine();
         }
     }
 }

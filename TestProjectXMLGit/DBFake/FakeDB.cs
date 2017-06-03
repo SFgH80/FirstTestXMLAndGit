@@ -5,16 +5,16 @@ using TestProjectXMLGit.DataModel;
 
 namespace TestProjectXMLGit.DBFake
 {
-    public class FakeDB
+    public static class FakeDB
     {
-        private List<Transaction> db = new List<Transaction>();
+        private static List<Transaction> db = new List<Transaction>();
 
-        public List<Transaction> GetTransactions ()
+        public static List<Transaction> GetTransactions ()
         {
             return db;
         }
 
-        public Transaction GetSpecial (string uniqueTradeId, string executingParty)
+        public static Transaction GetSpecial (string uniqueTradeId, string executingParty)
         {
             foreach (Transaction transaction in db)
             {
@@ -24,7 +24,7 @@ namespace TestProjectXMLGit.DBFake
             return null;
         }
 
-        public void AddToDB (Transaction transaction)
+        public static void AddToDB (Transaction transaction)
         {
             db.Add(transaction);
         }
