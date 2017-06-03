@@ -12,7 +12,7 @@ namespace TestProjectXMLGit
             }
             else
             {
-                Console.WriteLine("Invalid use! Try: TestProjektXMLGit yourxml.xml");
+                Console.WriteLine("Invalid use! Try: TestProjektXMLGit yourxmlname.xml");
             }
         }
     }
