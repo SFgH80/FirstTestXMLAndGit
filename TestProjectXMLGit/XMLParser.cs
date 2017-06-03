@@ -12,15 +12,8 @@ namespace TestProjectXMLGit
 
         public XMLParser (string fileName)
         {
-            try
-            {
-                parse = XDocument.Load(fileName);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
+            parse = XDocument.Load(fileName);
+            
             var transactions = parse.Descendants("transaction");
             foreach (var transaction in transactions)
             {
