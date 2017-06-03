@@ -23,5 +23,10 @@ namespace TestProjectXMLGit.DBFake
             }
             return null;
         }
+
+        public void AddToDB (Transaction transaction)
+        {
+            db.Add(transaction);
+        }
     }
 }
